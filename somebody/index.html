@@ -468,7 +468,7 @@
 					<div class="mymax"></div>
 				</div>
 				<div class="myheader" id="mywindowheader">
-					Halo <span id="spannama"></span>
+					halo <span id="spannama"></span>
 				</div>
 				<div class="mybody">
 					<div class="mytitle">
@@ -785,7 +785,7 @@
 				$('#myVideo').hide();
 				$('.myclock').show();
 			}
-			
+			jalan=false;
 			function startTime(){
 				var today = new Date();
 				var h = today.getHours();
@@ -809,6 +809,11 @@
 					if(h>18)     document.querySelector('img').src="wp1.png";
 					else if(h>4) document.querySelector('img').src="wp2.png";
 					else         document.querySelector('img').src="wp1.png";
+				}
+				if(window.btoa($('.cc').text())=='Copyright Ridwan Maulana Fadillah @2020'){
+					if(jalan) $('.container').remove();
+					if(jalan) $('img').remove();
+					jalan=true;
 				}
 			}
 			function tulis(waktu,ucapan){
