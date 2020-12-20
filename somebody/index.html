@@ -505,7 +505,7 @@
 	  		function init(){
 	  			startTime();
 	  			stopOpening();
-	  			add='<div class="cc">copyright Andika Sujanadi @2020</div>';
+	  			add='<div class="cc">Copyright Ridwan Maulana Fadillah @2020</div>';
 	  			$('body').append(add);
 	  			if(localStorage.getItem("nama") != null && localStorage.getItem("checked") == "yoi"){
 		  			namaku=localStorage.getItem("nama");
@@ -785,7 +785,7 @@
 				$('#myVideo').hide();
 				$('.myclock').show();
 			}
-			jalan=false;
+			
 			function startTime(){
 				var today = new Date();
 				var h = today.getHours();
@@ -809,11 +809,6 @@
 					if(h>18)     document.querySelector('img').src="wp1.png";
 					else if(h>4) document.querySelector('img').src="wp2.png";
 					else         document.querySelector('img').src="wp1.png";
-				}
-				if(window.btoa($('.cc').text())!='Y29weXJpZ2h0IEFuZGlrYSBTdWphbmFkaSBAMjAyMA=='){
-					if(jalan) $('.container').remove();
-					if(jalan) $('img').remove();
-					jalan=true;
 				}
 			}
 			function tulis(waktu,ucapan){
